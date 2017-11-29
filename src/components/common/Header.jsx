@@ -26,8 +26,8 @@ const Header = ({ match, location, onLogout, fetching, user = {} }) => {
         <Navigation />
         {user.id ? (
           <ul className='nav-actions list-inline float-right'>
-            <li><a href='/account' className='name'>{user.fullname}</a></li>
-            <li><a href='/account/login' onClick={onLogout}>退出</a></li>
+            <li>{user.fullname}</li>
+            <li><a href='/' onClick={onLogout}>退出</a></li>
           </ul>
         ) : (
           <ul className='nav-actions list-inline float-right'>
